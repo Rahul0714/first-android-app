@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     public void convert(View view){
         EditText rupeeAmt = findViewById(R.id.inputId);
         String amount = rupeeAmt.getText().toString();
-        double dollarAmt = 70 * Double.parseDouble(amount);
+        double dollarAmt = Double.parseDouble(amount) / 70;
         String toastText = String.valueOf(dollarAmt);
         Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show();
     }
